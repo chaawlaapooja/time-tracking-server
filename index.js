@@ -23,7 +23,7 @@ const mongoStore = connectMongo(expressSession);
 
 app.use(
   expressSession({
-    secret: process.env.secret,
+    secret: process.env.EXPRESS_SESSION_KEY,
     store: new mongoStore({
       mongooseConnection: mongoose.connection
     })
